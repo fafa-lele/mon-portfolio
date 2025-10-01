@@ -1,4 +1,4 @@
-cd chemin/vers/ton/dossier/portfolio
+cd [chemin/vers/ton/dossier/portfolio](https://github.com/fafa-lele/mon-portfolio.git)
 git init
 git add .
 git commit -m "Premier commit"
