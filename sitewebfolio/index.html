@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Fanny Leurent</title>
+    <style>
+        /* Reset basique */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'MaPolice', sans-serif;
+            line-height: 1.6;
+            background : #f4f4f4;
+            color: #333;
+        }
+
+        #bg-video {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        img.small-img {
+            width: 100px;   /* largeur de l'image */
+            height: auto;   /* conserve les proportions */
+            border-radius: 50%; /* optionnel : image ronde */
+            margin-right: 20px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        @font-face {
+            font-family: 'MaPolice';  /* nom que tu vas utiliser dans ton CSS */
+            src: url('pxl3.otf') format('truetype'); /* chemin vers le fichier */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        header {
+            
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-family: 'MaPolice', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #ffffff;
+        }
+
+        /* À propos */
+        #about p {
+            color: #fdfdfd;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Galerie */
+        #portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .project h3 {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        /* Contact */
+        #contact form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        #contact input, 
+        #contact textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        #contact button {
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f39c12;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #contact button:hover {
+            background-color: #e67e22;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #222;
+            color: #fff;
+            margin-top: 40px;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <video autoplay muted loop id="bg-video">
+    <source src="back.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la vidéo de fond.
+    </video>
+
+
+
+    <h1>Fanny Leurent</h1>
+    <nav>
+        <a href="#about">À propos</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>À propos de moi</h2>
+    <div class="container">
+    <img src="moi.jpg" alt="Logo" class="small-img" style="display:block; margin: 0 auto;">
+    </div>
+    <p>
+        Passionnée par l'informatique depuis plusieurs années, j'ai effectué des stages et suivi une formation de reconversion. J'ai ensuite travaillé pendant trois ans dans le support informatique. En parallèle, j'ai appris la programmation en autodidacte, et je suis récemment devenue active sur le web.
+    </p>
+</section>
+
+<section id="portfolio">
+    <h2>Mes Projets</h2>
+    <div class="project">
+        <img src="LPC.png" alt="site de lingerie">
+        <h3>site de lingerie</h3>
+         <a href="https://www.lespetitescachotteries.com/" target="_blank" rel="noopener noreferrer">
+    Visiter le site
+</a>
+    </div>
+    <div class="project">
+        <img src="blg.png" alt="site d'une boulangerie">
+        <h3>site d'une boulangerie</h3>
+        <a href="https://fannyleurentpro.wixstudio.com/my-site-1" target="_blank" rel="noopener noreferrer">
+    Visiter le site
+</a>
+
+    </div>
+    <div class="project">
+        <img src="photog.png" alt="site web blog de photographe">
+        <h3>site web blog de photographe</h3>
+         <a href="https://fannyleurentpro.wixstudio.com/my-site" target="_blank" rel="noopener noreferrer">
+    Visiter le site
+</a>
+    </div>
+    <!-- Ajoute autant de projets que nécessaire -->
+</section>
+
+<section id="contact">
+    <h2>Contactez-moi</h2>
+    <form id="contactForm">
+        <input type="text" placeholder="Votre nom" required>
+        <input type="email" placeholder="Votre email" required>
+        <textarea rows="5" placeholder="Votre message" required></textarea>
+        <a href="fanny.leurent.pro@gmail.com" style="padding:10px 20px; background:#12a1f3; color:white; text-decoration:none; border-radius:5px;">
+    envoyer
+</a>
+
+    </form>
+</section>
+
+<footer>
+    &copy; 2025 Fanny Leurent. Tous droits réservés.
+</footer>
+
+<script>
+    // Exemple simple : alerte lors de l'envoi du formulaire
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+        alert("Merci pour votre message ! Je vous répondrai bientôt.");
+        form.reset();
+    });
+</script>
+
+</body>
+</html>
